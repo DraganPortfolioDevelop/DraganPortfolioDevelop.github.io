@@ -56,7 +56,6 @@ header {
   width: 100%;
   z-index: 10;
   background-color: transparent; 
-  /* background-color: var(--cosmic);  */
   padding: 10px 15px;
 }
 
