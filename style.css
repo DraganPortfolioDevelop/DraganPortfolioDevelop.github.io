@@ -390,7 +390,6 @@ nav ul li a:hover::before {
 }
 
 .brends .content .box .scroller .brend-list li {
-  width: 150px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -398,7 +397,7 @@ nav ul li a:hover::before {
 }
 
 .brends .content .box .scroller .brend-list li img {
-  width: 150px;
+  max-width: 150px;
 }
 
 /* service section */
