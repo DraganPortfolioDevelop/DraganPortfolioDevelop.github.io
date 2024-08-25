@@ -354,7 +354,7 @@ nav ul li a:hover::before {
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 40s)
+  animation: scroll var(--_animation-duration, 9s)
     var(--_animation-direction, forwards) linear infinite;
 }
 
@@ -382,25 +382,25 @@ nav ul li a:hover::before {
 
 .brends .content .box .scroller .brend-list {
   margin: 0;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--cosmic);
   padding-inline: 0;
   list-style: none;
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 .brends .content .box .scroller .brend-list li {
   margin: 0;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--cosmic);
-  background: var(--amour);
+  /* background: var(--amour);
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -0.25rem var(--amour);
-  padding: 0.7rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--amour); */
+  padding: 0;
   list-style: none;
+  text-align: center;
+}
+
+.brends .content .box .scroller .brend-list li img {
+  width: 150px;
 }
 
 /* service section */

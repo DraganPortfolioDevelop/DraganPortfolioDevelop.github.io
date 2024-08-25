@@ -54,7 +54,6 @@ $(document).ready(function() {
   $('.scroller[data-speed="slow"]').css('--_animation-duration', '60s');
 });
 
-
 // ------------------ Pick up from Instagram top 6 posts for gallery
 // $(document).ready(function() {
 //   var profileId = "your-instagram-profile-id";
