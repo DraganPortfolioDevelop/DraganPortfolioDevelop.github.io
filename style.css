@@ -747,18 +747,6 @@ nav ul li a:hover::before {
     padding: 40px 0;
   }
 
-  .services .content .accordian-container .sub-text p {
-    font-size: 0.9rem;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-
-  .services .content .accordian-container .sub-text p span{
-    font-size: 0.9rem;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-
   .contact {
     padding: 40px 0;
   }
