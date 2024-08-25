@@ -276,8 +276,10 @@ nav ul li a:hover::before {
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--amour);
-  padding: 10px 0;
+  padding: 0;
   text-decoration: none;
+  border-radius: 50%;
+  animation: pulse 1s cubic-bezier(0, 0, 0, 0) 0.3s infinite;
 }
 
 .news .content .text i {
@@ -285,7 +287,19 @@ nav ul li a:hover::before {
   padding: 5px 10px;
   border-radius: 50px;
   color: var(--cosmic);
+  text-shadow: 0 2px 10px;
   background: var(--chantilly);
+  animation: changeSize 1s cubic-bezier(0, 0, 0, 0) 0s infinite;
+}
+
+@keyframes pulse {
+  0%{box-shadow: 0 0 0 0 var(--amour);}
+  25%{box-shadow: 0 0 0 1px var(--amour);}
+}
+
+@keyframes changeSize {
+  0%{transform: scale(1);}
+  25%{transform: scale(1.1);}
 }
 
 /* brends section */
