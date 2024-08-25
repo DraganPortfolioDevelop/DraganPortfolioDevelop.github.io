@@ -24,16 +24,6 @@ $(document).ready(function() {
   });
 });
 
-// ------------------ Services and prices
-$(".accordian-container .head").click(function(){
-  $(".accordian-container .sub-text").slideUp();
-  $(".accordian-container").removeClass("active");
-  $(".accordian-container .head span").removeClass("fa-angle-down").addClass("fa-angle-up" );
-  $(this).siblings(".sub-text").slideDown();
-  $(this).parent().addClass("active");
-  $(this).children("span").removeClass("fa-angle-up").addClass("fa-angle-down");
-  
-});
 // ------------------ Highlight each second line
 $(".accordian-container p span").each(function(index){
   if (index % 2 == 1) {
@@ -41,7 +31,7 @@ $(".accordian-container p span").each(function(index){
   }
 });
 
-// ------------------ Create an infinite horizontal scroll animation, https://www.youtube.com/watch?v=iLmBy-HKIAw
+// ------------------ Create an infinite horizontal scroll animation
 $(document).ready(function() {
   // Clone list items to fill empty space in scroller
   $('.brend-list li').clone().appendTo('.brend-list');

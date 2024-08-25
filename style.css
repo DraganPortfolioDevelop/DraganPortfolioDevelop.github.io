@@ -354,7 +354,7 @@ nav ul li a:hover::before {
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 9s)
+  animation: scroll var(--_animation-duration, 11s)
     var(--_animation-direction, forwards) linear infinite;
 }
 
@@ -447,90 +447,38 @@ nav ul li a:hover::before {
   margin-bottom: 5px;
 }
 
-.services .content .accordian-container .head {
-  background-color: var(--lavender_blush);
-  position: relative;
-  padding: 12px 15px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.services .content .accordian-container .head img {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  color: var(--lavender_blush);
-  height: 20px;
-  width: 20px;
-  text-align: center;
-  display: inline-block;
-  line-height: 30px;
-  color: var(--lavender_blush);
-  border-radius: 50%;
-}
-
-.services .content .accordian-container .head h4 {
-  font-size: 20px;
-  text-transform: capitalize;
+.services .content .box .content-table {
+  border-collapse: collapse;
   margin: 0;
-  padding: 0;
-  font-weight: 400;
-  color: var(--cosmic);
+  font-size: 0.9em;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px var(--chantilly);
 }
 
-.services .content .accordian-container.active .head {
+.services .content .box .content-table thead tr {
   background-color: var(--chantilly);
-  position: relative;
-  padding: 12px 15px;
-  cursor: pointer;
-  border-radius: 10px 10px 0 0;
-}
-
-.services .content .accordian-container .head .fa {
-  position: absolute;
-  right: 10px;
-  top: 11px;
   color: var(--cosmic);
-  height: 30px;
-  width: 30px;
-  text-align: center;
-  display: inline-block;
-  line-height: 30px;
+  text-align: left;
+  font-weight: bold;
 }
 
-.services .content .accordian-container .sub-text {
-  display: none;
-  padding: 15px;
-  border: 1px solid var(--chantilly);
-  background-color: var(--cosmic);
-  border-radius: 0 0 10px 10px;
+.services .content .box .content-table th,
+.services .content .box .content-table td {
+  padding: 12px 15px;
 }
 
-.services .content .accordian-container:nth-child(1) .sub-text {
-  display: block;
-  background-color: var(--cosmic);
+.services .content .box .content-table tbody tr {
+  border-bottom: 1px solid var(--chantilly);
 }
 
-.services .content .accordian-container .sub-text p {
-  /* letter-spacing: 1px; */
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--lavender_blush);
-  margin: 0;
-  padding: 0 1rem 0 1rem;
-  /* border-radius: 0 0 10px 10px; */
+.services .content .box .content-table tbody tr:nth-of-type(even) {
+  background-color: var(--lavender_blush);
 }
 
-.services .content .accordian-container .sub-text p span {
-  /* letter-spacing: 1px; */
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--lavender_blush);
-  margin: 0;
-  padding: 0;
-  float: right;
+.services .content .box .content-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--cosmic);
 }
 
 /* gallery section */
