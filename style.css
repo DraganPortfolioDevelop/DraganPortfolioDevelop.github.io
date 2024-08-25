@@ -462,6 +462,7 @@ nav ul li a:hover::before {
   background-color: var(--chantilly);
   color: var(--cosmic);
   text-align: left;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -547,7 +548,7 @@ nav ul li a:hover::before {
 }
 
 .contact .content .text p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
   color: var(--lavender_blush);
@@ -565,7 +566,7 @@ nav ul li a:hover::before {
   display: block;
   margin-bottom: 15px;
   color: var(--lavender_blush);
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
 }
 
@@ -583,7 +584,7 @@ nav ul li a:hover::before {
 
 .contact .content .text .social-media p {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
   margin-right: 10px;
@@ -629,7 +630,7 @@ nav ul li a:hover::before {
 }
 
 .contact .content .hours p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 1px;
   color: var(--lavender_blush);
@@ -692,22 +693,6 @@ nav ul li a:hover::before {
   .services .content .box {
     flex: 0 0 100%;
     max-width: 100%;
-  }
-
-  .services .content .box p {
-    font-size: 1.2rem;
-  }
-
-  .services .content .accordian-container .sub-text p {
-    font-size: 0.8rem;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-
-  .services .content .accordian-container .sub-text p span{
-    font-size: 0.8rem;
-    font-weight: 500;
-    line-height: 1.5;
   }
 
   .gallery .content {
