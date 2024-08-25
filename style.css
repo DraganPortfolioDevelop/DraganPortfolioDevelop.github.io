@@ -73,10 +73,9 @@ header .container {
 }
 
 .logo a {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--lavender_blush);
+  display: inline-block;
+  position: relative;
+  z-index: 100;
 }
 
 .logo img {
