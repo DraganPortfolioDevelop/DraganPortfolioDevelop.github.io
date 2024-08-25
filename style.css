@@ -427,7 +427,7 @@ nav ul li a:hover::before {
 
 .services .content .text p {
   /* letter-spacing: 1px; */
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.5;
   color: var(--cosmic);
@@ -443,14 +443,15 @@ nav ul li a:hover::before {
   border-radius: 10px;
 }
 
-.services .content .accordian-container {
+.services .content {
   margin-bottom: 5px;
 }
 
 .content-table {
   border-collapse: collapse;
   margin: 0;
-  font-size: 0.9em;
+  font-size: 0.9rem;
+  color: var(--cosmic);
   min-width: 100%;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
@@ -461,7 +462,7 @@ nav ul li a:hover::before {
   background-color: var(--chantilly);
   color: var(--cosmic);
   text-align: left;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .content-table th,
@@ -518,7 +519,6 @@ nav ul li a:hover::before {
   background-color: var(--cosmic);
   border-bottom: 1px solid var(--chantilly);
 }
-
 
 /* contact section */
 
