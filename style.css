@@ -391,9 +391,6 @@ nav ul li a:hover::before {
 
 .brends .content .box .scroller .brend-list li {
   margin: 0;
-  /* background: var(--amour);
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -0.25rem var(--amour); */
   padding: 0;
   list-style: none;
   text-align: center;
