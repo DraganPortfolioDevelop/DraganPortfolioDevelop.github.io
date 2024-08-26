@@ -483,6 +483,24 @@ nav ul li a:hover::before {
   border-bottom: 2px solid var(--cosmic);
 }
 
+.payment {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.payment p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 10px 0 0 5px;
+  color: var(--cosmic);
+}
+
+.payment img {
+  max-width: 200px;
+  padding-left: 10px;
+}
+
 /* gallery section */
 
 .gallery .content {
