@@ -484,6 +484,7 @@ nav ul li a:hover::before {
 }
 
 .payment {
+  -webkit-display: flex;
   display: flex;
   flex-wrap: wrap;
 }
