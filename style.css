@@ -518,17 +518,8 @@ nav ul li a:hover::before {
 .gallery .content  .box img {
   display: block;
   width: 100%;
-  /* -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-transition:  all .5s ease;
-  transition:  all .5s ease; */
   object-fit: cover;
 }
-
-/* .gallery .content  .box img:hover {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-} */
 
 .gallery h2 {
   font-size: 1.8rem;
