@@ -483,6 +483,11 @@ nav ul li a:hover::before {
   border-bottom: 2px solid var(--cosmic);
 }
 
+.content-table span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .payment {
   -webkit-display: flex;
   display: flex;
