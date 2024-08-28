@@ -649,19 +649,19 @@ nav ul li a:hover::before {
   width: 40px;
   line-height: 1.7;
   text-align: center;
-  background-color: var(--cosmic);
-  color: var(--lavender_blush);
+  background-color: var(--lavender_blush);
+  color: var(--cosmic);
   display: inline-block;
   border-radius: 50%;
   margin-right: 10px;
-  transition: all .5s ease;
+  /* transition: all .5s ease; */
   font-size: 1.5rem;
 }
 
-.contact .content .text .social-media a:hover {
+/* .contact .content .text .social-media a:hover {
   background-color: var(--lavender_blush);
   color: var(--cosmic);
-}
+} */
 
 .contact .content .text .copy {
   margin-top: 30px;
