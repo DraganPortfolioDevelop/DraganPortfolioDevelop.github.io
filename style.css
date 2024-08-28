@@ -547,6 +547,7 @@ nav ul li a:hover::before {
   border-radius: 50%;
   -webkit-transition:  all .5s ease;
   transition:  all .5s ease;
+  cursor: pointer;
 }
 
 .gallery a:hover {
