@@ -536,16 +536,7 @@ nav ul li a:hover::before {
   background-color: var(--chantilly);
   padding: 5px 10px;
   border-radius: 50%;
-  -webkit-transition:  all .5s ease;
-  transition:  all .5s ease;
-  cursor: pointer;
 }
-
-.gallery a:hover {
-  color: var(--cosmic);
-  background-color: var(--lavender_blush);
-  border: 1px solid var(--chantilly);
-} 
 
 /* contact section */
 
