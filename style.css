@@ -540,6 +540,14 @@ nav ul li a:hover::before {
   border-bottom: 1px solid var(--chantilly);
 }
 
+.gallery h2 a {
+  color: var(--cosmic);
+  background-color: var(--chantilly);
+  padding: 5px 10px;
+  border-radius: 50%;
+  border-bottom: 1px solid var(--cosmic);
+}
+
 /* contact section */
 
 .contact {
