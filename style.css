@@ -647,7 +647,7 @@ nav ul li a:hover::before {
 .contact .content .text .social-media a {
   height: 40px;
   width: 40px;
-  line-height: 2.1;
+  line-height: 1.7;
   text-align: center;
   background-color: var(--cosmic);
   color: var(--lavender_blush);
@@ -655,7 +655,7 @@ nav ul li a:hover::before {
   border-radius: 50%;
   margin-right: 10px;
   transition: all .5s ease;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .contact .content .text .social-media a:hover {
