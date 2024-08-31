@@ -124,7 +124,7 @@ nav {
   /*    display: none;*/
   position: fixed;
   background-color: var(--cosmic);
-  width: 380px;
+  width: 370px;
   top: 0;
   right: 0;
   height: 100%;
@@ -865,11 +865,5 @@ nav ul .text img {
 
   .contact {
     padding: 40px 0;
-  }
-}
-
-@media(max-width: 360px) {
-  nav {
-    width: 760px;
   }
 }
