@@ -502,8 +502,8 @@ nav ul .text img {
 .content-table {
   border-collapse: collapse;
   margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: .9rem;
+  font-weight: 400;
   color: var(--cosmic);
   min-width: 100%;
   border-radius: 5px 5px 0 0;
@@ -515,13 +515,27 @@ nav ul .text img {
   background-color: var(--chantilly);
   color: var(--cosmic);
   text-align: left;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: .9rem;
+  font-weight: 400;
 }
 
 .content-table th,
 .content-table td {
   padding: 12px 15px;
+}
+
+.content-table th {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.content-table th span {
+  font-size: .8rem;
+}
+
+.content-table td {
+  font-size: .9rem;
+  font-weight: 600;
 }
 
 .content-table tbody tr {
@@ -534,11 +548,6 @@ nav ul .text img {
 
 .content-table tbody tr:last-of-type {
   border-bottom: 2px solid var(--cosmic);
-}
-
-.content-table span {
-  font-size: .9rem;
-  font-weight: 400;
 }
 
 .payment {
