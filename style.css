@@ -204,12 +204,12 @@ nav .box {
   padding: 35px;
 }
 
-nav .text img {
+nav ul .text img {
   max-width: 200px;
   padding: 10px 30px;
 }
 
-nav .signature li {
+.signature li {
   display: block;
   font-size: 1rem;
   font-weight: 400;
@@ -219,22 +219,22 @@ nav .signature li {
   text-align: left;
 }
 
-nav .signature span.fa {
+.signature span.fa {
   padding-right: 10px;
 }
 
-nav .signature span {
+.signature span {
   display: inline-block;
   left: 0;
   top: 0;
   color: var(--cosmic);
 }
 
-nav .social-media {
+.social-media-nav {
   text-align: center;
 }
 
-nav .social-media p {
+.social-media-nav p {
   display: inline-block;
   font-size: 1rem;
   font-weight: 400;
@@ -243,7 +243,7 @@ nav .social-media p {
   color: var(--cosmic);
 }
 
-nav .social-media a {
+.social-media-nav a {
   height: 40px;
   width: 40px;
   line-height: 1.7;
