@@ -124,7 +124,7 @@ nav {
   /*    display: none;*/
   position: fixed;
   background-color: var(--cosmic);
-  width: 365px;
+  width: 375px;
   top: 0;
   right: 0;
   height: 100%;
