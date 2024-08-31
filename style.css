@@ -124,7 +124,7 @@ nav {
   /*    display: none;*/
   position: fixed;
   background-color: var(--cosmic);
-  width: 365px;
+  width: 360px;
   top: 0;
   right: 0;
   height: 100%;
@@ -154,6 +154,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--lavender_blush);
@@ -193,6 +194,65 @@ nav ul li a::before {
 
 nav ul li a:hover::before {
   width: 100%;
+}
+
+nav .box {
+  background-color: var(--chantilly);
+  margin: 20px 10px 10px 10px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 35px;
+}
+
+nav .text img {
+  max-width: 200px;
+  padding: 10px 30px;
+}
+
+nav .signature li {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--cosmic);
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+nav .signature span.fa {
+  padding-right: 10px;
+}
+
+nav .signature span {
+  display: inline-block;
+  left: 0;
+  top: 0;
+  color: var(--cosmic);
+}
+
+nav .social-media {
+  text-align: center;
+}
+
+nav .social-media p {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 10px;
+  color: var(--cosmic);
+}
+
+nav .social-media a {
+  height: 40px;
+  width: 40px;
+  line-height: 1.7;
+  color: var(--cosmic);
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  /* transition: all .5s ease; */
+  font-size: 1.5rem;
 }
 
 /* hero section */
