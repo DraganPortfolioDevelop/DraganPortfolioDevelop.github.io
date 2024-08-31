@@ -124,7 +124,7 @@ nav {
   /*    display: none;*/
   position: fixed;
   background-color: var(--cosmic);
-  width: 375px;
+  width: 380px;
   top: 0;
   right: 0;
   height: 100%;
@@ -783,10 +783,6 @@ nav ul .text img {
 
   .hero h1 {
     font-size: 40px;
-  }
-
-  nav {
-    width: 380px;
   }
 
   .news .content .box {
