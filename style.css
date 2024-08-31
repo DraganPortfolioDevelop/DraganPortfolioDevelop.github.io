@@ -2,6 +2,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap'); */
 /* @import url('href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merienda:wght@300..900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* Font-Awesome-Icons */
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -11,8 +12,8 @@
   --lavender_blush: #F9F5F6;
   --chantilly: #F2BED1;
   --amour: #F8E8EE;
-  --common-font: "Merienda", cursive;
-  --main-font: 'Roboto', sans-serif;
+  --common-font: 'Merienda', cursive;
+  --main-font:'Roboto', sans-serif; 
 }
 
 html {
@@ -123,7 +124,7 @@ nav {
   /*    display: none;*/
   position: fixed;
   background-color: var(--cosmic);
-  width: 335px;
+  width: 365px;
   top: 0;
   right: 0;
   height: 100%;
@@ -159,6 +160,7 @@ nav ul li a {
   display: block;
   position: relative;
   padding: 10px 30px;
+  text-align: center;
 }
 
 nav ul li a.active::before {
@@ -359,7 +361,7 @@ nav ul li a:hover::before {
 }
 
 .scroller[data-direction="right"] {
-  --_animation-direction: reverse;
+  --_animation-direction: normal;
 }
 
 .scroller[data-direction="left"] {
@@ -547,6 +549,7 @@ nav ul li a:hover::before {
   font-family: var(--common-font);
   font-size: 1.8rem;
   font-weight: 600;
+  margin-left: 10px;
   color: var(--amour);
   padding: 0;
   text-decoration: none;
@@ -654,7 +657,7 @@ nav ul li a:hover::before {
   width: 40px;
   line-height: 1.7;
   text-align: center;
-  background-color: var(--lavender_blush);
+  background-color: var(--chantilly);
   color: var(--cosmic);
   display: inline-block;
   border-radius: 50%;
