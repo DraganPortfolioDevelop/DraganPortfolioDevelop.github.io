@@ -785,6 +785,10 @@ nav ul .text img {
     font-size: 40px;
   }
 
+  nav {
+    width: 380px;
+  }
+
   .news .content .box {
     padding: 10px;
   }
@@ -865,5 +869,11 @@ nav ul .text img {
 
   .contact {
     padding: 40px 0;
+  }
+}
+
+@media(max-width: 360px) {
+  nav {
+    width: 760px;
   }
 }
