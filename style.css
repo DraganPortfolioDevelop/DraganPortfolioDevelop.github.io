@@ -68,6 +68,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
+  border-bottom: 1px solid var(--cosmic);
 }
 
 .container {
