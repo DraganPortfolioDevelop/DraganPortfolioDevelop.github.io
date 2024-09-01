@@ -83,7 +83,7 @@ header .container {
 
 .logo img {
   width: 90px;
-  padding-top: 5px;
+  padding-top: 8px;
 }
 
 .ham-burger {
@@ -101,6 +101,11 @@ header .container {
   /*    ham-burger rotation*/
   -webkit-transition: transform .5s ease;
   transition: transform .5s ease;
+}
+
+header .container .ham-burger span:nth-child(2) {
+  margin: 0; /* Remove margin bottom on second span */
+  margin-top: 8px;
 }
 
 /*    ham-burger rotation*/
@@ -283,6 +288,7 @@ nav ul .text img {
   right: 60px;
   background-color: var(--chantilly);
   /* color:var(--lavender_blush); */
+  box-shadow: 0 0 10px var(--cosmic);
   color:var(--cosmic);
   width: 40px;
   height: 40px;
@@ -709,7 +715,7 @@ nav ul .text img {
 .contact .content .text .social-media a {
   height: 40px;
   width: 40px;
-  line-height: 1.7;
+  line-height: 1.75;
   text-align: center;
   background-color: var(--chantilly);
   color: var(--cosmic);
@@ -719,11 +725,6 @@ nav ul .text img {
   /* transition: all .5s ease; */
   font-size: 1.5rem;
 }
-
-/* .contact .content .text .social-media a:hover {
-  background-color: var(--lavender_blush);
-  color: var(--cosmic);
-} */
 
 .contact .content .text .copy {
   margin-top: 30px;
@@ -827,6 +828,26 @@ nav ul .text img {
 }
 
 @media(max-width: 550px) {
+
+  header {
+    position: absolute;
+  }
+
+  header .container {
+    max-width: 95%;
+    text-align: center;
+    background-color: var(--cosmic);
+    margin-top: 15px;
+    padding: 0px 30px;
+    border-radius: 35px;
+    box-shadow: 0 0 10px var(--chantilly);
+    opacity: .85;
+  }
+
+  header .container img {
+    width: 70px;
+    margin-top: 5px;
+  }
 
   .hero h1 {
     font-size: 1.8rem;

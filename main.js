@@ -18,6 +18,8 @@ $(document).ready(function() {
     }
   });
 
+  $(window).trigger('scroll'); // Trigger scroll event on page load
+
   $('.scroll-to-top').click(function() {
     $('html, body').animate({scrollTop : 0}, 100);
     return false;
