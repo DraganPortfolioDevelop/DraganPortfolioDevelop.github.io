@@ -776,11 +776,6 @@ nav ul .text img {
 }
 
 @media(max-width: 768px) {
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
   .news .content .box {
     padding: 10px;
   }
@@ -894,5 +889,12 @@ nav ul .text img {
 
   .contact {
     padding: 40px 0;
+  }
+}
+
+@media(max-width: 370px) {
+  .signature li {
+    font-size: 1.1rem;
+    font-weight: 600;
   }
 }
