@@ -844,13 +844,18 @@ nav ul .text img {
     opacity: .85;
   }
 
-  header .container img {
+  header .container .logo img {
     width: 70px;
     margin-top: 5px;
   }
 
   nav {
     width: 100%;
+  }
+
+  nav ul .text img {
+    max-width: 200px;
+    padding: 10px 30px;
   }
 
   .hero h1 {
