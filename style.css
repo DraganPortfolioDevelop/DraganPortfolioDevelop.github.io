@@ -849,6 +849,10 @@ nav ul .text img {
     margin-top: 5px;
   }
 
+  header .ham-burger span {
+    width: 28px;
+  }
+
   nav {
     width: 100%;
   }
