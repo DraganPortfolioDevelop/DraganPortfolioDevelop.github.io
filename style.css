@@ -266,7 +266,7 @@ nav ul .text img {
 /* hero section */
 .hero {
   height: 100vh;
-  background: url(image/bg.png) center no-repeat;
+  background: url(image/bg.webp) center no-repeat;
   background-size: cover;
   padding: 15px;
   display: flex;
