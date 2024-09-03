@@ -68,7 +68,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  border-bottom: 1px solid var(--cosmic);
+  border-bottom: 1px solid var(--lavender_blush);
 }
 
 .container {
@@ -94,11 +94,11 @@ header .container {
 }
 
 .ham-burger span {
-  height: 3px;
+  height: 2px;
   margin-bottom: 8px;
   display: block;
   background-color: var(--lavender_blush);
-  width: 30px;
+  width: 27px;
   /*    ham-burger rotation*/
   -webkit-transition: transform .5s ease;
   transition: transform .5s ease;
@@ -723,8 +723,14 @@ nav ul .text img {
   display: inline-block;
   border-radius: 50%;
   margin-right: 10px;
-  /* transition: all .5s ease; */
   font-size: 1.5rem;
+}
+
+.contact .social-media img {
+  background-color: var(--chantilly);
+  max-width: 70px;
+  border-radius: 5px;
+  position: absolute;
 }
 
 .contact .content .text .copy {
@@ -838,6 +844,7 @@ nav ul .text img {
     border-radius: 35px;
     box-shadow: 0 0 10px var(--chantilly);
     opacity: .85;
+    border-bottom: none;
   }
 
   header .container .logo img {
