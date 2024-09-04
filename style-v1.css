@@ -382,7 +382,7 @@ nav ul .text img {
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--cosmic);
-  padding: 14px 0 16px 0;
+  padding: 30px 0 40px 0;
 }
 
 .brends .content .box .scroller {
@@ -879,6 +879,10 @@ animation: changeSize 1s cubic-bezier(0, 0, 0, 0) infinite;
 
   .brends {
     padding: 40px 0;
+  }
+
+  .brends .content .text h2 {
+    padding: 0 0 40px 0;
   }
 
   .services {
