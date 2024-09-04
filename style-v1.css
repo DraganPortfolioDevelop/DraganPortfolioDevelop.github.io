@@ -266,7 +266,7 @@ nav ul .text img {
 /* hero section */
 .hero {
   height: 100vh;
-  background: url(image/bg.webp) center no-repeat;
+  background: url(./image/bg.webp) center no-repeat;
   background-size: cover;
   padding: 15px;
   display: flex;
@@ -328,43 +328,39 @@ nav ul .text img {
 }
 
 .news .content .text h2 {
-  font-family: var(--common-font);
   font-size: 1.8rem;
   font-weight: 600;
-  color: var(--amour);
-  padding: 10px 0;
+  color: var(--lavender_blush);
+  padding: 20px 0;
+  text-align: center;
+  background-color: var(--cosmic);
 }
-
-.news .content .text a {
-  font-family: var(--common-font);
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--amour);
-  padding: 0;
-  text-decoration: none;
-  border-radius: 50%;
-  animation: pulse 1s cubic-bezier(0, 0, 0, 0) 0.3s infinite;
-}
-
-.news .content .text i {
-  font-size: 2rem;
-  padding: 5px 10px;
-  border-radius: 50px;
-  color: var(--cosmic);
-  text-shadow: 0 2px 10px;
-  background: var(--chantilly);
-  animation: changeSize 1s cubic-bezier(0, 0, 0, 0) 0s infinite;
-}
-
-@keyframes pulse {
+  
+  .news .content .text a {
+    font-family: var(--common-font);
+    color: var(--amour);
+    text-decoration: none;
+  }
+  
+  .news .content .text a i {
+    font-size: 2rem;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: var(--cosmic);
+    text-shadow: 0 2px 10px;
+    background: var(--chantilly);
+    animation: changeSize 1s cubic-bezier(0, 0, 0, 0) infinite;
+  }
+  
+  @keyframes pulse {
   0%{box-shadow: 0 0 0 0 var(--amour);}
   25%{box-shadow: 0 0 0 1px var(--amour);}
-}
-
-@keyframes changeSize {
+  }
+  
+  @keyframes changeSize {
   0%{transform: scale(1);}
   25%{transform: scale(1.1);}
-}
+  }
 
 /* brends section */
 
@@ -607,35 +603,29 @@ nav ul .text img {
 }
 
 .gallery h2 a {
-  font-family: var(--common-font);
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-left: 10px;
-  color: var(--amour);
-  padding: 0;
-  text-decoration: none;
-  border-radius: 50%;
-  animation: pulse 1s cubic-bezier(0, 0, 0, 0) 0.3s infinite;
+font-family: var(--main-font);
+color: var(--amour);
+text-decoration: none;
 }
 
-.gallery h2 i {
-  font-size: 2rem;
-  padding: 5px 10px;
-  border-radius: 50px;
-  color: var(--cosmic);
-  text-shadow: 0 2px 10px;
-  background: var(--chantilly);
-  animation: changeSize 1s cubic-bezier(0, 0, 0, 0) 0s infinite;
+.gallery h2 a i {
+font-size: 2rem;
+padding: 5px 10px;
+border-radius: 50px;
+color: var(--cosmic);
+text-shadow: 0 2px 10px;
+background: var(--chantilly);
+animation: changeSize 1s cubic-bezier(0, 0, 0, 0) infinite;
 }
 
 @keyframes pulse {
-  0%{box-shadow: 0 0 0 0 var(--amour);}
-  25%{box-shadow: 0 0 0 1px var(--amour);}
+0% { box-shadow: 0 0 0 0 var(--amour); }
+25% { box-shadow: 0 0 0 1px var(--amour); }
 }
 
 @keyframes changeSize {
-  0%{transform: scale(1);}
-  25%{transform: scale(1.1);}
+0% { transform: scale(1); }
+25% { transform: scale(1.05); }
 }
 
 /* contact section */
