@@ -10,21 +10,64 @@ $(document).ready(function(){
 
 // ------------------ Arrow scroll the page back to the top
 $(document).ready(function() {
+  const $scrollButton = $('.scroll-to-top');
+  
+  // Show/hide button based on scroll position
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.scroll-to-top').fadeIn();
+    const scrollTop = $(this).scrollTop();
+    const windowHeight = $(this).height();
+    const docHeight = $(document).height();
+    
+    // Calculate scroll percentage
+    const scrollPercent = (scrollTop / (docHeight - windowHeight)) * 100;
+    
+    // Update progress ring
+    $('.progress-circle circle').css('stroke-dashoffset', 100 - scrollPercent);
+    
+    // Toggle visibility
+    if (scrollTop > 300) {
+      $scrollButton.addClass('visible');
     } else {
-      $('.scroll-to-top').fadeOut();
+      $scrollButton.removeClass('visible');
+    }
+  }).trigger('scroll');
+
+  // Smooth scroll to top
+  $scrollButton.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800, 'easeInOutQuint');
+    
+    // Add click animation
+    $(this).addClass('clicked');
+    setTimeout(() => $(this).removeClass('clicked'), 300);
+  });
+  
+  // Add easing function for smooth scrolling
+  $.extend($.easing, {
+    easeInOutQuint: function(x, t, b, c, d) {
+      if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
+      return c/2*((t-=2)*t*t*t*t + 2) + b;
     }
   });
-
-  $(window).trigger('scroll'); // Trigger scroll event on page load
-
-  $('.scroll-to-top').click(function() {
-    $('html, body').animate({scrollTop : 0}, 100);
-    return false;
-  });
 });
+// $(document).ready(function() {
+//   $(window).scroll(function() {
+//     if ($(this).scrollTop() > 100) {
+//       $('.scroll-to-top').fadeIn();
+//     } else {
+//       $('.scroll-to-top').fadeOut();
+//     }
+//   });
+
+//   $(window).trigger('scroll'); // Trigger scroll event on page load
+
+//   $('.scroll-to-top').click(function() {
+//     $('html, body').animate({scrollTop : 0}, 100);
+//     return false;
+//   });
+// });
 
 // ------------------ Highlight each second line
 $(".accordian-container p span").each(function(index){
@@ -35,16 +78,10 @@ $(".accordian-container p span").each(function(index){
 
 // ------------------ Create an infinite horizontal scroll animation
 $(document).ready(function() {
-  // Clone list items to fill empty space in scroller
-  $('.brend-list li').clone().appendTo('.brend-list');
-
-  // Set data-animated attribute to true
-  $('.scroller').attr('data-animated', 'true');
-
-  // Set animation duration based on data-speed attribute
-  $('.scroller[data-speed="fast"]').css('--_animation-duration', '20s');
-  $('.scroller[data-speed="slow"]').css('--_animation-duration', '60s');
+  // Initialize scroller
+  $('.brands-scroller').attr('data-animated', 'true');
 });
+
 
 // ------------------ Pick up from Instagram top 6 posts for gallery
 // $(document).ready(function() {

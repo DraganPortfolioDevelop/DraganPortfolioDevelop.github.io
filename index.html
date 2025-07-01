@@ -53,27 +53,51 @@
   <!--    end header-->
 
   <!--    start hero-->
-  <section class="hero" id="home">
-    <!-- scroll the page back to the top -->
-    <div class="scroll-to-top">
-      <i class="fa fa-chevron-up"></i>
-    </div>
-  </section>
-  <!--    end hero-->
-
-  <!-- start news -->
-  <section class="news">
-    <div class="container">
-      <div class="content">
-        <div class="box">
-          <div class="text">
-            <h2><a title="Phone" href="tel:+381649329522">Zakažite termin <i class="fa fa-phone"></i></a></h2>
+  <section class="hero-section" id="home">
+    <div class="hero-overlay"></div>
+    
+    <div class="cta-container">
+      <div class="cta-content">
+        <div class="cta-card">
+          <div class="cta-text">
+            <h1 class="cta-title">Salon La Folie</h1>
+            <p class="cta-subtitle">Rezervišite termin u našem salonu i iskusite vrhunski kvalitet usluga</p>
+            
+            <div class="cta-buttons">
+              <a href="tel:+381649329522" class="cta-btn cta-phone pulse">
+                <span class="btn-icon"><i class="fas fa-phone-alt"></i></span>
+                <span class="btn-text">Pozovite: +381 64 932 9522</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="cta-decoration">
+            <div class="decoration-circle pulse-animation"></div>
+            <div class="decoration-circle pulse-animation delay-1"></div>
+            <div class="decoration-circle pulse-animation delay-2"></div>
           </div>
         </div>
       </div>
     </div>
+    
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+    
+    <button class="scroll-to-top" aria-label="Scroll to top">
+      <svg class="scroll-icon" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"/>
+      </svg>
+      <span class="progress-ring">
+        <svg class="progress-circle" viewBox="0 0 32 32">
+          <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </span>
+    </button>
   </section>
-  <!-- end news -->
+  <!--    end hero-->
 
   <!--    start services-->
   <section class="services">
@@ -189,47 +213,122 @@
   <!--    end services-->
 
   <!--    start brends -->
-  <section class="brends" id="brends">
-    <div class="container">
-      <div class="content">
-        <div class="box text">
-          <h2>Kozmetika sa kojom radimo</h2>
-
-          <div class="scroller">
-            <ul class="brend-list scroller__inner">
-              <li><img src="/image/Moroccanoil-Logo.webp" alt="Moroccanoil"></li>
-              <li><img src="/image/Olaplex_logo.webp" alt="Olaplex"></li>
-              <li><img src="/image/ksilk-keratin-logo.webp" alt="Ksilk keratin"></li>
-              <li><img src="/image/kaaral-logo.webp" alt="Kaaral"></li>
-              <li><img src="/image/elgon-professional-logo.webp" alt="Elgon"></li>
-            </ul>
+  <section class="brands-section" id="brands">
+  <div class="container">
+    <div class="brands-header">
+      <h2 class="brands-title">Kozmetika sa kojom radimo</h2>
+      <p class="brands-subtitle">Saradnja sa vodećim svetskim brendovima za negu kose omogućava nam da Vam pružimo visoko kvalitetne usluge i izvanredne rezultate.</p>
+    </div>
+    
+    <div class="brands-scroller" data-animated="true" data-speed="medium" data-direction="right">
+      <div class="scroller-track">
+        <div class="scroller-inner">
+          <div class="brand-item">
+            <img src="/image/Moroccanoil-Logo.webp" alt="Moroccanoil" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Hidratantne formule sa arganovim uljem</span>
+            </div>
+          </div>
+          <div class="brand-item">
+            <img src="/image/Olaplex_logo1.webp" alt="Olaplex" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Olaplex Bond formula</span>
+            </div>
+          </div>
+          <div class="brand-item">
+            <img src="/image/ksilk-keratin-logo.webp" alt="Ksilk keratin" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Keratinski tretmani</span>
+            </div>
+          </div>
+          <div class="brand-item">
+            <img src="/image/kaaral-logo1.webp" alt="Kaaral" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Inspiracija iz Italije, elegancija za svaki dan</span>
+            </div>
+          </div>
+          <div class="brand-item">
+            <img src="/image/elgon-professional-logo.webp" alt="Elgon" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Prirodni sastojci keratina</span>
+            </div>
+          </div>
+          
+          <!-- Duplicated for seamless looping -->
+          <div class="brand-item">
+            <img src="/image/Moroccanoil-Logo.webp" alt="Moroccanoil" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Hidratantne formule sa arganovim uljem</span>
+            </div>
+          </div>
+          <div class="brand-item">
+            <img src="/image/Olaplex_logo1.webp" alt="Olaplex" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Olaplex Bond formula</span>
+            </div>
+          </div>
+          <div class="brand-item">
+            <img src="/image/ksilk-keratin-logo.webp" alt="Ksilk keratin" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Keratinski tretmani</span>
+            </div>
+          </div>
+          <div class="brand-item">
+            <img src="/image/kaaral-logo1.webp" alt="Kaaral" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Inspiracija iz Italije, elegancija za svaki dan</span>
+            </div>
+          </div>
+          <div class="brand-item">
+            <img src="/image/elgon-professional-logo.webp" alt="Elgon" loading="lazy" class="brand-logo">
+            <div class="brand-overlay">
+              <span class="brand-info">Prirodni sastojci keratina</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
   <!--    end brends-->
   
   <!-- start gallery -->
-  <section class="gallery" id="gallery" >
-    <h2><a title="Gallery" href="https://www.instagram.com/salonlafolie/" target="_blank">Galerija <i class="fa fa-instagram"></i></a></h2>
-    <div class="content">
-      
-      <div class="box">
-        <img src="/image/G1.webp" alt="gallery">
-      </div>
-      <div class="box">
-        <img src="/image/G2.webp" alt="gallery">
-      </div>
-      <div class="box">
-        <img src="/image/G3.webp" alt="gallery">
-      </div>
-      <div class="box">
-        <img src="/image/G4.webp" alt="gallery">
-      </div>
+<section class="gallery-section" id="gallery">
+  <div class="gallery-header">
+    <h2 class="gallery-title">
+      <a href="https://www.instagram.com/salonlafolie/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram gallery">
+        <span class="title-text">Galerija</span>
+        <span class="instagram-icon">
+          <i class="fa fa-instagram"></i>
+        </span>
+        <span class="follow-text">Zapratite Nas</span>
+      </a>
+    </h2>
+    <p class="gallery-subtitle">Upoznajte naš najnoviji rad i zavirite u trenutke iza scene.</p>
+  </div>
+  
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="/image/G1.webp" alt="Salon service example 1" loading="lazy" class="gallery-image">
     </div>
-  </section>
-  <!-- end gallery -->
+    <div class="gallery-item">
+      <img src="/image/G2.webp" alt="Salon service example 2" loading="lazy" class="gallery-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/image/G3.webp" alt="Salon service example 3" loading="lazy" class="gallery-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/image/G4.webp" alt="Salon service example 4" loading="lazy" class="gallery-image">
+    </div>
+  </div>
+  
+  <div class="gallery-footer">
+    <a href="https://www.instagram.com/salonlafolie/" target="_blank" rel="noopener noreferrer" class="instagram-cta">
+      Pogledajte više na Instagram profilu <i class="fa fa-instagram"></i>
+    </a>
+  </div>
+</section>
+<!-- end gallery -->
 
   <!--    start footer-->
   <footer class="contact" id="contact">
@@ -249,14 +348,16 @@
               <!-- <a href="" target="_blank"><span class="fa fa-facebook"></span></a> -->
               <a title="Instagram" href="https://www.instagram.com/salonlafolie/" target="_blank"><span class="fa fa-instagram"></span></a>
               <!-- <a href="https://www.pinterest.com/salonlafolie/" target="_blank"><span class="fa fa-pinterest"></span></a> -->
-              <img src="/image/google-bg.webp" alt="google-reviews">
+              <a href="https://www.google.com/maps/place/Salon+La+Folie/@44.802022,20.486299,15z/data=!4m8!3m7!1s0x475a7a9cc8924e3d:0x73ac1f335ff06cf0!8m2!3d44.802022!4d20.4862991!9m1!1b1!16s%2Fg%2F11_qgprpg?hl=en&entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="/image/google-bg.webp" alt="google-reviews">
+              </a>
             </div>
         </div>
         <div class="box hours">
           <h2>Radno vreme</h2>
-          <p class="title-p">Ponedeljak - Petak <span>|</span> 9:00 - 17:00</p>
-          <p class="title-p">Subota <span>|</span> 9:00 - 15:00</p>
-          <p class="title-p">Nedelja <span>|</span> Zatvoreno</p>
+          <p class="title-p">Ponedeljak - Petak <span> </span> 9:00 - 17:00</p>
+          <p class="title-p">Subota <span> </span> 9:00 - 15:00</p>
+          <p class="title-p">Nedelja <span> </span> Zatvoreno</p>
         </div>
         <div class="box">
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.959107900694!2d20.486299100000004!3d44.802022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9cc8924e3d%3A0x73ac1f335ff06cf0!2sSalon%20La%20Folie!5e0!3m2!1sen!2sno!4v1708269906133!5m2!1sen!2sno"
