@@ -318,7 +318,8 @@ nav ul .text img {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeInUp 1s ease-out;
+  animation: fadeInUp 5s ease-out;
+/*   animation: fadeInUp 1s ease-out; */
 }
 
 .cta-card {
@@ -1510,4 +1511,5 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
