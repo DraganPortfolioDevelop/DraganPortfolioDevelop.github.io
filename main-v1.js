@@ -8,6 +8,30 @@ $(document).ready(function(){
   })
 })
 
+// ------------------ Background video
+$(document).ready(function() {
+  const $video = $('#bg-video');
+  const videoEl = $video[0]; // Get the native DOM element
+  
+  // Ensure video plays only once (remove loop if exists)
+  $video.removeAttr('loop');
+  
+  // Pause video when it ends
+  $video.on('ended', function() {
+    videoEl.pause();
+  });
+  
+  // Try autoplay first
+  videoEl.play().catch(function(error) {
+    console.log('Autoplay blocked, will play on first interaction');
+    
+    // Fallback: Play on first click/touch (only once)
+    $(document).one('click touchstart', function() {
+      videoEl.play();
+    });
+  });
+});
+
 // ------------------ Arrow scroll the page back to the top
 $(document).ready(function() {
   const $scrollButton = $('.scroll-to-top');
@@ -107,4 +131,5 @@ $(document).ready(function() {
 //     }
 //   });
 // });
+
 
