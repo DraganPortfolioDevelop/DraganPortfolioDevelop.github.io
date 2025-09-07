@@ -243,14 +243,16 @@ nav ul .text img {
 .social-media-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center; 
+  height: 40px; 
+  width: 40px; 
   background: var(--cosmic);
   color: var(--lavender_blush);
   text-decoration: none;
-  font-size: .9rem;
+  font-size: 1.5rem;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
-  border-radius: 50px;
+  border-radius: 5px;
   border: 1px solid var(--lavender_blush);
   transition: all 0.3s ease;
 }
@@ -1511,5 +1513,6 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
