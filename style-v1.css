@@ -1283,6 +1283,13 @@ nav ul .text img {
   letter-spacing: 1px;
 }
 
+.contact .content .text .info li a {
+  color: var(--lavender_blush);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
 .contact .content .text .info li span.fa {
   margin-right: 20px;
   color: var(--chantilly);
@@ -1514,6 +1521,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
