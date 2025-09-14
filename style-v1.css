@@ -224,6 +224,16 @@ nav ul .text img {
   text-align: left;
 }
 
+.signature li a {
+  display: inline-block;
+  left: -30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--cosmic);
+  letter-spacing: 1px;
+}
+
 .signature span.fa {
   padding-right: 10px;
 }
@@ -1521,6 +1531,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
