@@ -1049,7 +1049,7 @@ nav ul .text img {
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--lavender_blush);
-  margin-bottom: 0.5rem;
+  margin-bottom: -0.5rem;
   font-family: var(--main-font);
 }
 
@@ -1531,6 +1531,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
