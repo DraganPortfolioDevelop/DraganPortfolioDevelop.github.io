@@ -1057,7 +1057,7 @@ nav ul .text img {
   content: '';
   position: absolute;
   bottom: -0.5;
-  margin-bottom: -0.5rem;
+  margin-bottom: 0.5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
