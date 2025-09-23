@@ -1034,17 +1034,6 @@ nav ul .text img {
   position: relative;
 }
 
-/* .gallery-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background: var(--chantilly);
-} */
-
 .gallery-title {
   font-size: 2.2rem;
   font-weight: 600;
@@ -1543,6 +1532,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
