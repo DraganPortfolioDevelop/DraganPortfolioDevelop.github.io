@@ -1034,7 +1034,7 @@ nav ul .text img {
   position: relative;
 }
 
-.gallery-header::after {
+/* .gallery-header::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1043,7 +1043,7 @@ nav ul .text img {
   width: 100px;
   height: 3px;
   background: var(--chantilly);
-}
+} */
 
 .gallery-title {
   font-size: 2.2rem;
@@ -1543,6 +1543,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
