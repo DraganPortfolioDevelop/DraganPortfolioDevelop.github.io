@@ -1042,7 +1042,7 @@ nav ul .text img {
   font-family: var(--main-font);
 }
 
-/* .gallery-title:after {
+.gallery-title:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1052,7 +1052,7 @@ nav ul .text img {
   width: 80px;
   height: 3px;
   background: var(--chantilly);
-} */
+}
 
 .gallery-title a {
   display: inline-flex;
@@ -1065,18 +1065,6 @@ nav ul .text img {
 
 .gallery-title a:hover {
   color: var(--amour);
-}
-
-.gallery-title a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: var(--chantilly);
 }
 
 .instagram-icon {
@@ -1544,6 +1532,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
