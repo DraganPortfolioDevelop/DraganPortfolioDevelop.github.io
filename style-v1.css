@@ -1056,7 +1056,7 @@ nav ul .text img {
 .gallery-title:after {
   content: '';
   position: absolute;
-  bottom: -0.5;
+  bottom: 0;
   margin-bottom: 0.5rem;
   left: 50%;
   transform: translateX(-50%);
@@ -1543,6 +1543,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
