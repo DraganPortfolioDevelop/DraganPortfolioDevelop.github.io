@@ -1049,8 +1049,20 @@ nav ul .text img {
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--lavender_blush);
-  margin-bottom: -0.5rem;
+  margin-bottom: 0.5rem;
   font-family: var(--main-font);
+}
+
+.gallery-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--chantilly);
 }
 
 .gallery-title a {
@@ -1531,6 +1543,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
