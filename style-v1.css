@@ -939,11 +939,18 @@ nav ul .text img {
   text-align: justify;
 }
 
-.services .content .img img {
+/* .services .content .img img {
   width: 100%;
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
   border-radius: 10px;
+} */
+
+.services .content .img video {  
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: auto;
 }
 
 .services .content {
@@ -1532,6 +1539,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
