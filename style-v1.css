@@ -1041,15 +1041,15 @@ nav ul .text img {
   position: relative;
 }
 
-/* .gallery-title {
+.gallery-title {
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--lavender_blush);
   margin-bottom: 0.5rem;
   font-family: var(--main-font);
-} */
+}
 
-.gallery-title {
+/* .gallery-title {
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--lavender_blush);
@@ -1057,7 +1057,7 @@ nav ul .text img {
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
-}
+} */
 
 .gallery-title:after {
   content: '';
@@ -1549,6 +1549,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
