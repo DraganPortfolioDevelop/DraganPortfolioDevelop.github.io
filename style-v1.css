@@ -1041,7 +1041,7 @@ nav ul .text img {
   position: relative;
 }
 
-.gallery-title {
+.gallery-title h2 {
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--lavender_blush);
@@ -1059,7 +1059,7 @@ nav ul .text img {
   display: inline-block;
 } */
 
-.gallery-title:after {
+.gallery-title h2:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1549,6 +1549,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
