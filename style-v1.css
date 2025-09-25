@@ -1049,16 +1049,6 @@ nav ul .text img {
   font-family: var(--main-font);
 }
 
-/* .gallery-title {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: var(--lavender_blush);
-  font-family: var(--main-font);
-  margin-bottom: 1rem;
-  position: relative;
-  display: inline-block;
-} */
-
 .gallery-title:after {
   content: '';
   position: absolute;
@@ -1071,7 +1061,7 @@ nav ul .text img {
   background: var(--chantilly);
 }
 
-/* .gallery-title a {
+.gallery-title a {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
@@ -1107,7 +1097,7 @@ nav ul .text img {
   line-height: 1.3;
   opacity: 0.8;
   color: var(--chantilly);
-} */
+}
 
 .gallery-subtitle {
   color: var(--lavender_blush);
@@ -1549,6 +1539,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
