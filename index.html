@@ -118,14 +118,35 @@
             posebne frizure za svaku priliku. Nudimo širok spektar usluga, uključujući šišanje, feniranje, 
             farbanje, ombre tehniku i kreiranje svečanih frizura za posebne prilike. Dođite i prepustite se transformaciji koja će 
             učiniti da se osećate ispunjeno i puni samopouzdanja.</p>
-
-          <div class="img">
-            <!-- <img src="/image/kozmetika_1.webp" alt="usluge"> -->
-            <video src="/video/v_1.mp4" alt="video" autoplay muted playsinline onended="this.pause();"></video>
-          </div>
         </div>
     
         <div class="box" id="services">
+          <div class="img">
+            <div class="video-container" id="videoContainer">
+              <video id="serviceVideo" autoplay muted playsinline>
+                <source src="./video/v_1.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <div class="text-container">
+                  <div class="main-text">Posetite Nas</div>
+                  <div class="typing-container">
+                    <div class="typing-text" id="typingElement"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--    end services-->
+
+  <!--    start pricelist-->
+  <section class="pricelist">
+    <div class="container">
+      <div class="content">
+        <div class="box" id="pricelist">
           <table class="content-table">
             <thead>
               <tr>
@@ -220,7 +241,7 @@
       </div>
     </div>
   </section>
-  <!--    end services-->
+  <!--    end pricelist-->
 
   <!--    start brends -->
   <section class="brands-section" id="brands">
@@ -393,6 +414,7 @@
 </body>
 
 </html>
+
 
 
 
