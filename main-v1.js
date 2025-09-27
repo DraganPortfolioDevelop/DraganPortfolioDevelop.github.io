@@ -108,91 +108,121 @@ $(document).ready(function() {
 
 // Text animation service
 $(document).ready(function() {
-  const $typingElement = $('#typingElement');
-  const $videoContainer = $('#videoContainer');
-  const $video = $('#serviceVideo');
-  
-  const words = ['Marka Oreškovića 9, Beograd', 'Zakažite termin', 'Telefon: +381 64 9329522'];
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let typingSpeed = 100;
-  let typingTimeout;
-  let animationStarted = false;
+    const $typingElement = $('#typingElement');
+    const $videoContainer = $('#videoContainer');
+    const $video = $('#serviceVideo');
+    
+    const words = ['Marka Oreškovića 9, Beograd', 'Zakažite termin', 'Telefon: +381 64 9329522'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+    let typingTimeout;
+    let animationStarted = false;
+    let videoPlayed = false;
 
-  // Function to handle the typing animation
-  function type() {
-    const currentWord = words[wordIndex];
-    
-    if (isDeleting) {
-      // Deleting characters
-      $typingElement.text(currentWord.substring(0, charIndex - 1));
-      charIndex--;
-      typingSpeed = 50; // Faster when deleting
-    } else {
-      // Typing characters
-      $typingElement.text(currentWord.substring(0, charIndex + 1));
-      charIndex++;
-      typingSpeed = 100; // Normal speed when typing
+    // Function to handle the typing animation
+    function type() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            // Deleting characters
+            $typingElement.text(currentWord.substring(0, charIndex - 1));
+            charIndex--;
+            typingSpeed = 50; // Faster when deleting
+        } else {
+            // Typing characters
+            $typingElement.text(currentWord.substring(0, charIndex + 1));
+            charIndex++;
+            typingSpeed = 100; // Normal speed when typing
+        }
+        
+        // Check if word is complete
+        if (!isDeleting && charIndex === currentWord.length) {
+            // Pause at the end of the word
+            typingSpeed = 1500;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            // Move to the next word
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typingSpeed = 500; // Pause before starting next word
+        }
+        
+        typingTimeout = setTimeout(type, typingSpeed);
     }
-    
-    // Check if word is complete
-    if (!isDeleting && charIndex === currentWord.length) {
-      // Pause at the end of the word
-      typingSpeed = 1500;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      // Move to the next word
-      isDeleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-      typingSpeed = 500; // Pause before starting next word
-    }
-    
-    typingTimeout = setTimeout(type, typingSpeed);
-  }
 
-  // Function to start the animation
-  function startAnimation() {
-    if (animationStarted) return; // Prevent multiple starts
-    animationStarted = true;
-    
-    $videoContainer.addClass('video-ended');
-    // Start typing animation after a short delay
-    setTimeout(() => {
-      type();
-    }, 800);
-  }
-  
-  // Video ended event
-  $video.on('ended', function() {
-    console.log('Video ended - starting animation');
-    // Stop the video (it will only play once)
-    $video[0].pause();
-    
-    // Start the text animation
-    startAnimation();
-  });
-  
-  // Ensure video only plays once
-  $video.attr('loop', false);
-  
-  // Check if video is already ended (in case it loaded quickly)
-  if ($video[0].readyState >= 3) { // HAVE_FUTURE_DATA or more
-    if ($video[0].ended) {
-      console.log('Video already ended');
-      startAnimation();
+    // Function to start the animation
+    function startAnimation() {
+        if (animationStarted) return; // Prevent multiple starts
+        animationStarted = true;
+        
+        $videoContainer.addClass('video-ended');
+        // Start typing animation after a short delay
+        setTimeout(() => {
+            type();
+        }, 800);
     }
-  }
-  
-  // Fallback: if video doesn't trigger ended event, start animation after video duration + buffer
-  const videoDuration = ($video[0].duration || 5) * 1000; // Get duration or default to 5 seconds
-  setTimeout(function() {
-    if (!$videoContainer.hasClass('video-ended') && !animationStarted) {
-      console.log('Fallback triggered - starting animation');
-      $video[0].pause();
-      startAnimation();
+
+    // Function to play video when element is in viewport
+    function playVideoWhenVisible() {
+        if (videoPlayed) return;
+        
+        const element = $videoContainer[0];
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        
+        // Check if element is in viewport (with some offset)
+        if (rect.top <= windowHeight * 0.8 && rect.bottom >= 0) {
+            $video[0].play().then(() => {
+                console.log('Video started playing');
+                videoPlayed = true;
+            }).catch((error) => {
+                console.log('Video play failed, starting animation directly:', error);
+                startAnimation();
+            });
+        }
     }
-  }, videoDuration + 2000); // Video duration + 2 second buffer
+
+    // Video ended event
+    $video.on('ended', function() {
+        console.log('Video ended - starting animation');
+        // Start the text animation
+        startAnimation();
+    });
+    
+    // Video error event
+    $video.on('error', function() {
+        console.log('Video error - starting animation directly');
+        startAnimation();
+    });
+    
+    // Ensure video only plays once and doesn't loop
+    $video.attr('loop', false);
+    $video.attr('autoplay', false); // Remove autoplay, we'll control it manually
+
+    // Check if video is already ended (in case it loaded quickly)
+    if ($video[0].readyState >= 3) {
+        if ($video[0].ended) {
+            console.log('Video already ended');
+            startAnimation();
+        }
+    }
+
+    // Scroll event to trigger video play when element is visible
+    $(window).on('scroll', playVideoWhenVisible);
+    
+    // Also check on page load
+    playVideoWhenVisible();
+
+    // Fallback: if video doesn't trigger ended event, start animation after reasonable time
+    setTimeout(function() {
+        if (!$videoContainer.hasClass('video-ended') && !animationStarted) {
+            console.log('Fallback triggered - starting animation');
+            $video[0].pause();
+            startAnimation();
+        }
+    }, 10000); // 10 second fallback
 });
 
 // ------------------ Pick up from Instagram top 6 posts for gallery
@@ -219,6 +249,7 @@ $(document).ready(function() {
 //     }
 //   });
 // });
+
 
 
 
