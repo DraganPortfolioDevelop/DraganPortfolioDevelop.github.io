@@ -106,6 +106,94 @@ $(document).ready(function() {
   $('.brands-scroller').attr('data-animated', 'true');
 });
 
+// Text animation service
+$(document).ready(function() {
+  const $typingElement = $('#typingElement');
+  const $videoContainer = $('#videoContainer');
+  const $video = $('#serviceVideo');
+  
+  const words = ['Marka Oreškovića 9, Beograd', 'Zakažite termin', 'Telefon: +381 64 9329522'];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+  let typingTimeout;
+  let animationStarted = false;
+
+  // Function to handle the typing animation
+  function type() {
+    const currentWord = words[wordIndex];
+    
+    if (isDeleting) {
+      // Deleting characters
+      $typingElement.text(currentWord.substring(0, charIndex - 1));
+      charIndex--;
+      typingSpeed = 50; // Faster when deleting
+    } else {
+      // Typing characters
+      $typingElement.text(currentWord.substring(0, charIndex + 1));
+      charIndex++;
+      typingSpeed = 100; // Normal speed when typing
+    }
+    
+    // Check if word is complete
+    if (!isDeleting && charIndex === currentWord.length) {
+      // Pause at the end of the word
+      typingSpeed = 1500;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      // Move to the next word
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      typingSpeed = 500; // Pause before starting next word
+    }
+    
+    typingTimeout = setTimeout(type, typingSpeed);
+  }
+
+  // Function to start the animation
+  function startAnimation() {
+    if (animationStarted) return; // Prevent multiple starts
+    animationStarted = true;
+    
+    $videoContainer.addClass('video-ended');
+    // Start typing animation after a short delay
+    setTimeout(() => {
+      type();
+    }, 800);
+  }
+  
+  // Video ended event
+  $video.on('ended', function() {
+    console.log('Video ended - starting animation');
+    // Stop the video (it will only play once)
+    $video[0].pause();
+    
+    // Start the text animation
+    startAnimation();
+  });
+  
+  // Ensure video only plays once
+  $video.attr('loop', false);
+  
+  // Check if video is already ended (in case it loaded quickly)
+  if ($video[0].readyState >= 3) { // HAVE_FUTURE_DATA or more
+    if ($video[0].ended) {
+      console.log('Video already ended');
+      startAnimation();
+    }
+  }
+  
+  // Fallback: if video doesn't trigger ended event, start animation after video duration + buffer
+  const videoDuration = ($video[0].duration || 5) * 1000; // Get duration or default to 5 seconds
+  setTimeout(function() {
+    if (!$videoContainer.hasClass('video-ended') && !animationStarted) {
+      console.log('Fallback triggered - starting animation');
+      $video[0].pause();
+      startAnimation();
+    }
+  }, videoDuration + 2000); // Video duration + 2 second buffer
+});
 
 // ------------------ Pick up from Instagram top 6 posts for gallery
 // $(document).ready(function() {
@@ -131,5 +219,6 @@ $(document).ready(function() {
 //     }
 //   });
 // });
+
 
 
