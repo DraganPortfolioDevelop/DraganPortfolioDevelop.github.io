@@ -112,7 +112,7 @@ $(document).ready(function() {
     const $videoContainer = $('#videoContainer');
     const $video = $('#serviceVideo');
     
-    const words = ['Marka Oreškovića 9, Beograd', 'Zakažite termin', 'Telefon: +381 64 9329522'];
+    const words = ['Marka Oreškovića 9, Beograd', 'Zakažite termin', 'Telefon: +381 64 9329522', 'Lepota počinje frizurom a završava osmehom!', 'Salon La Folie'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -120,6 +120,7 @@ $(document).ready(function() {
     let typingTimeout;
     let animationStarted = false;
     let videoPlayed = false;
+    let typingCompleted = false;
 
     // Function to handle the typing animation
     function type() {
@@ -147,9 +148,38 @@ $(document).ready(function() {
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
             typingSpeed = 500; // Pause before starting next word
+            
+            // Check if we've completed one full cycle through all words
+            if (wordIndex === 0) {
+                typingCompleted = true;
+                restartVideo();
+                return; // Stop the typing animation
+            }
         }
         
         typingTimeout = setTimeout(type, typingSpeed);
+    }
+
+    // Function to restart the video
+    function restartVideo() {
+        console.log('Typing animation completed - restarting video');
+        $videoContainer.removeClass('video-ended');
+        $video[0].currentTime = 0;
+        $video[0].play().then(() => {
+            console.log('Video restarted');
+            // Reset animation flags for next cycle
+            animationStarted = false;
+            typingCompleted = false;
+            videoPlayed = true;
+        }).catch((error) => {
+            console.log('Video restart failed:', error);
+            // If video restart fails, restart the typing animation after a delay
+            setTimeout(() => {
+                animationStarted = false;
+                typingCompleted = false;
+                startAnimation();
+            }, 2000);
+        });
     }
 
     // Function to start the animation
@@ -166,7 +196,7 @@ $(document).ready(function() {
 
     // Function to play video when element is in viewport
     function playVideoWhenVisible() {
-        if (videoPlayed) return;
+        if (videoPlayed && !typingCompleted) return;
         
         const element = $videoContainer[0];
         const rect = element.getBoundingClientRect();
@@ -197,9 +227,9 @@ $(document).ready(function() {
         startAnimation();
     });
     
-    // Ensure video only plays once and doesn't loop
+    // Ensure video only plays once and doesn't loop automatically
     $video.attr('loop', false);
-    $video.attr('autoplay', false); // Remove autoplay, we'll control it manually
+    // $video.attr('autoplay', false); // Remove autoplay, we'll control it manually
 
     // Check if video is already ended (in case it loaded quickly)
     if ($video[0].readyState >= 3) {
@@ -249,6 +279,7 @@ $(document).ready(function() {
 //     }
 //   });
 // });
+
 
 
 
