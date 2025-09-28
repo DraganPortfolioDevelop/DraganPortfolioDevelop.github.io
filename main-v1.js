@@ -112,7 +112,7 @@ $(document).ready(function() {
     const $videoContainer = $('#videoContainer');
     const $video = $('#serviceVideo');
     
-    const words = ['Marka Oreškovića 9, Beograd', 'Zakažite termin', 'Telefon: +381 64 9329522', 'Lepota počinje frizurom a završava osmehom!', 'Salon La Folie'];
+    const words = ['Marka Oreškovića 9, Beograd', 'Zakažite termin', 'Telefon: +381 64 9329522', 'Lepota počinje frizurom, a završava osmehom!', 'Salon La Folie'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -279,6 +279,7 @@ $(document).ready(function() {
 //     }
 //   });
 // });
+
 
 
 
