@@ -731,7 +731,7 @@ nav ul .text img {
 }
 
 .brands-title {
-  font-family: var(--main-font);
+  font-family: var(--common-font);
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--cosmic);
@@ -1187,11 +1187,11 @@ nav ul .text img {
 }
 
 .gallery-title {
+  font-family: var(--main-font);
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--lavender_blush);
   margin-bottom: 0.5rem;
-  font-family: var(--main-font);
 }
 
 .gallery-title:after {
@@ -1217,6 +1217,10 @@ nav ul .text img {
 
 .gallery-title a:hover {
   color: var(--amour);
+}
+
+.gallery-title .title-text {
+  font-family: var(--common-font);
 }
 
 .instagram-icon {
@@ -1424,6 +1428,7 @@ nav ul .text img {
 
 .contact .content .text h2,
 .contact .content .hours h2 {
+  font-family: var(--common-font);
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--chantilly);
@@ -1689,6 +1694,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
