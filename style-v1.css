@@ -396,6 +396,10 @@ nav ul .text img {
   margin-top: 2rem;
 }
 
+.cta-buttons .btn-text {
+  font-family: var(--common-font);
+}
+
 .cta-btn {
   display: inline-flex;
   align-items: center;
@@ -1694,6 +1698,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
