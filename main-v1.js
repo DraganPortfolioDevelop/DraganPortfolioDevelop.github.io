@@ -255,33 +255,42 @@ $(document).ready(function() {
     }, 10000); // 10 second fallback
 });
 
-// Reviews jQuery kod za prikaz recenzija
-$(document).ready(function() {
-  $.getJSON("/reviews-approved.json", function(data) {
-    data.forEach(function(review) {
-      $(".review-slider").append(`
-        <div class="review-card">
-          <div class="review-avatar"></div>
-          <div class="review-stars">${"⭐".repeat(review.rating)}</div>
-          <p class="review-comment">"${review.comment}"</p>
-          <p class="review-name">— ${review.name || "Anonimno"}</p>
-          <p class="review-date">${review.date}</p>
-        </div>
-      `);
-    });
-  });
-});
-
-// jQuery za slanje recenzije
+// Poveži leave_review.html sa Google backendom
+const backendUrl = "https://script.google.com/macros/s/AKfycbygkJtJwE5wOsV5tk_Gg8x66qVrxUN5LvRd3Rc0IcJC2yq6ZjKjA1GMCKvnNiFDO_AXCw/exec";
 $("#sendReview").submit(function(e) {
   e.preventDefault();
 
-  $.post("/submit-review.php", $(this).serialize(), function(response) {
-    alert(response.message || "Hvala! Vaša recenzija čeka odobrenje.");
-  }, "json");
+  const data = {
+    name: $("#name").val(),
+    email: $("#email").val(),
+    rating: $("#rating").val(),
+    comment: $("#comment").val()
+  };
+
+  $.post(backendUrl, JSON.stringify(data), function() {
+    alert("Hvala! Vaša recenzija čeka odobrenje.");
+  });
 });
 
+// Kako da prikažeš recenzije na sajtu (index.html)
+fetch("https://docs.google.com/spreadsheets/d/1pDeA7dVekYPuF2V_jrGyg0qYj20u5bqTTA9JMsaCUNw/gviz/tq?tqx=out:json")
+  .then(r => r.text())
+  .then(text => {
+    const json = JSON.parse(text.substring(47, text.length - 2));
+    const rows = json.table.rows;
 
+    rows.forEach(row => {
+      const name = row.c[0]?.v;
+      const email = row.c[1]?.v;
+      const rating = row.c[2]?.v;
+      const comment = row.c[3]?.v;
+      const approved = row.c[4]?.v;
+
+      if (approved === "yes") {
+        document.querySelector("#reviews").innerHTML += ` <div class="review"> <h3>${name}</h3> <p>${comment}</p> <p>${rating} ⭐</p> </div> `;
+      }
+    });
+  });
 
 
 // ------------------ Pick up from Instagram top 6 posts for gallery
@@ -308,6 +317,7 @@ $("#sendReview").submit(function(e) {
 //     }
 //   });
 // });
+
 
 
 
