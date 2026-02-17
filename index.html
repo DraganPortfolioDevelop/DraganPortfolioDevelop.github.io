@@ -425,9 +425,46 @@
   <!--    end footer-->   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="/main-v1.js"></script>
+  <script>
+  async function loadReviews() {
+    const url = "https://docs.google.com/spreadsheets/d/1pDeA7dVekYPuF2V_jrGyg0qYj20u5bqTTA9JMsaCUNw/gviz/tq?tqx=out:json";
+  
+    const response = await fetch(url);
+    const text = await response.text();
+  
+    // Google ubacuje nepotreban tekst na početku
+    const json = JSON.parse(text.substring(47, text.length - 2));
+  
+    const rows = json.table.rows;
+  
+    let html = "";
+  
+    rows.forEach(row => {
+      const name = row.c[0]?.v || "Anonimno";
+      const rating = row.c[2]?.v || 5;
+      const comment = row.c[3]?.v || "";
+      const status = row.c[4]?.v || "";
+  
+      if (status === "yes") {
+        html += `
+          <div class="review-item">
+            <h4>${name}</h4>
+            <p>${"⭐".repeat(rating)}</p>
+            <p>${comment}</p>
+          </div>
+        `;
+      }
+    });
+  
+    document.querySelector(".review-slider").innerHTML = html;
+  }
+  
+  loadReviews();
+</script>
 </body>
 
 </html>
+
 
 
 
