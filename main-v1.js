@@ -256,38 +256,6 @@ $(document).ready(function() {
 });
 
 // Poveži leave_review.html sa Google backendom
-const backendUrl = "https://script.google.com/macros/s/AKfycbygkJtJwE5wOsV5tk_Gg8x66qVrxUN5LvRd3Rc0IcJC2yq6ZjKjA1GMCKvnNiFDO_AXCw/exec";
-$("#sendReview").submit(function(e) {
-  e.preventDefault();
-
-  const data = {
-    name: $("#name").val(),
-    email: $("#email").val(),
-    rating: $("#rating").val(),
-    comment: $("#comment").val()
-  };
-
-  $.ajax({
-  url: backendUrl,
-  method: "POST",
-  contentType: "application/json",
-  data: JSON.stringify({
-    name: $("#name").val(),
-    email: $("#email").val(),
-    rating: $("#rating").val(),
-    comment: $("#comment").val()
-  }),
-  success: function() {
-    alert("Hvala vam! Vaša recenzija je uspešno poslata.");
-  },
-  error: function(err) {
-    console.log("Greška:", err);
-    alert("Došlo je do greške. Pokušajte ponovo.");
-  }
-});
-
-});
-
 // Kako da prikažeš recenzije na sajtu (index.html)
 fetch("https://docs.google.com/spreadsheets/d/1pDeA7dVekYPuF2V_jrGyg0qYj20u5bqTTA9JMsaCUNw/gviz/tq?tqx=out:json")
   .then(r => r.text())
@@ -333,6 +301,7 @@ fetch("https://docs.google.com/spreadsheets/d/1pDeA7dVekYPuF2V_jrGyg0qYj20u5bqTT
 //     }
 //   });
 // });
+
 
 
 
