@@ -255,6 +255,35 @@ $(document).ready(function() {
     }, 10000); // 10 second fallback
 });
 
+// Reviews jQuery kod za prikaz recenzija
+$(document).ready(function() {
+  $.getJSON("/reviews-approved.json", function(data) {
+    data.forEach(function(review) {
+      $(".review-slider").append(`
+        <div class="review-card">
+          <div class="review-avatar"></div>
+          <div class="review-stars">${"⭐".repeat(review.rating)}</div>
+          <p class="review-comment">"${review.comment}"</p>
+          <p class="review-name">— ${review.name || "Anonimno"}</p>
+          <p class="review-date">${review.date}</p>
+        </div>
+      `);
+    });
+  });
+});
+
+// jQuery za slanje recenzije
+$("#sendReview").submit(function(e) {
+  e.preventDefault();
+
+  $.post("/submit-review.php", $(this).serialize(), function(response) {
+    alert(response.message || "Hvala! Vaša recenzija čeka odobrenje.");
+  }, "json");
+});
+
+
+
+
 // ------------------ Pick up from Instagram top 6 posts for gallery
 // $(document).ready(function() {
 //   var profileId = "your-instagram-profile-id";
@@ -279,7 +308,6 @@ $(document).ready(function() {
 //     }
 //   });
 // });
-
 
 
 
