@@ -268,14 +268,23 @@ $("#sendReview").submit(function(e) {
   };
 
   $.ajax({
-    url: backendUrl,
-    method: "POST",
-    contentType: "application/json",
-    data: JSON.stringify(data),
-    success: function() {
-      alert("Hvala vam! Vaša recenzija je uspešno poslata.");
-    }
-  });
+  url: backendUrl,
+  method: "POST",
+  contentType: "application/json",
+  data: JSON.stringify({
+    name: $("#name").val(),
+    email: $("#email").val(),
+    rating: $("#rating").val(),
+    comment: $("#comment").val()
+  }),
+  success: function() {
+    alert("Hvala vam! Vaša recenzija je uspešno poslata.");
+  },
+  error: function(err) {
+    console.log("Greška:", err);
+    alert("Došlo je do greške. Pokušajte ponovo.");
+  }
+});
 
 });
 
@@ -324,6 +333,7 @@ fetch("https://docs.google.com/spreadsheets/d/1pDeA7dVekYPuF2V_jrGyg0qYj20u5bqTT
 //     }
 //   });
 // });
+
 
 
 
