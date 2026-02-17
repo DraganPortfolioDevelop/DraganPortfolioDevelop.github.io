@@ -267,9 +267,16 @@ $("#sendReview").submit(function(e) {
     comment: $("#comment").val()
   };
 
-  $.post(backendUrl, JSON.stringify(data), function() {
-    alert("Hvala! Vaša recenzija čeka odobrenje.");
+  $.ajax({
+    url: backendUrl,
+    method: "POST",
+    contentType: "application/json",
+    data: JSON.stringify(data),
+    success: function() {
+      alert("Hvala vam! Vaša recenzija je uspešno poslata.");
+    }
   });
+
 });
 
 // Kako da prikažeš recenzije na sajtu (index.html)
@@ -317,6 +324,7 @@ fetch("https://docs.google.com/spreadsheets/d/1pDeA7dVekYPuF2V_jrGyg0qYj20u5bqTT
 //     }
 //   });
 // });
+
 
 
 
