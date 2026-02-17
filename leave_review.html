@@ -21,7 +21,7 @@
     <img src="./image/vk-review.png" alt="logo">
     <h2>Ostavite svoj utisak</h2>
 
-    <form id="sendReview">
+    <!-- <form id="sendReview">
         <label>Ime (opciono)</label>
         <input type="text" name="name" id="name">
 
@@ -41,7 +41,25 @@
         <textarea name="comment" id="comment" required></textarea>
 
         <button type="submit">Pošalji</button>
-    </form>
+    </form> -->
+      <form id="sendReview" method="POST" action="https://script.google.com/macros/s/AKfycbygkJtJwE5wOsV5tk_Gg8x66qVrxUN5LvRd3Rc0IcJC2yq6ZjKjA1GMCKvnNiFDO_AXCw/exec">
+        <label>Ime (opciono)</label>
+        <input type="text" name="name" id="name" required>
+        <label>Email (za nagradnu igru)</label>
+        <input type="email" name="email" id="email" required>
+        <label>Ocena</label>
+        <select name="rating" id="rating" required>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+        <label>Komentar</label>
+        <textarea name="comment" id="comment" required></textarea>
+        <button type="submit">Pošalji</button>
+      </form>
+
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -50,6 +68,7 @@
 
 
 </html>
+
 
 
 
