@@ -1404,8 +1404,7 @@ nav ul .text img {
 }
 
 /* reviews section */
-
-#reviews {
+/* #reviews {
   padding: 60px 20px;
   background: var(--lavender_blush);
   text-align: center;
@@ -1463,7 +1462,7 @@ nav ul .text img {
 .review-date {
   font-size: 12px;
   color: #777;
-}
+} */
 
 /* contact section */
 
@@ -1760,6 +1759,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
