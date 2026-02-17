@@ -1,6 +1,6 @@
 <?php
 // Sigurnosni token koji samo ti znaš
-$valid_token = "ddd561ee69b20d6a470fed6ecf7dd9f3";
+$valid_token = "token";
 
 // Provera tokena
 if (!isset($_GET["token"]) || $_GET["token"] !== $valid_token) {
@@ -41,3 +41,4 @@ Ocena: <?= $rating ?> ⭐
 <a href="https://www.google.com/maps/search/?api=1&query=Salon+La+Folie" target="_blank">
   Ostavi Google recenziju
 </a>
+
