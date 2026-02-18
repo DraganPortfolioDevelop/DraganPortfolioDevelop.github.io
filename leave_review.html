@@ -29,20 +29,30 @@
         <label>Ocena</label>
         <select name="rating" id="rating" required>
           <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
         </select>
         <label>Komentar</label>
         <textarea name="comment" id="comment" required></textarea>
         <button type="submit">Pošalji</button>
       </form>
     </section>
+
+    <!-- OVO DODAJ -->
+    <script>
+    document.getElementById("sendReview").addEventListener("submit", function() {
+        setTimeout(() => {
+            window.close();
+            window.location.href = "https://salon-lafolie.com";
+        }, 500);
+    });
+    </script>
 </body>
 
-
 </html>
+
 
 
 
