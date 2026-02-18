@@ -443,9 +443,9 @@
   
     rows.forEach(row => {
       const name = row.c[0]?.v || "Anonimno";
-      const rating = row.c[2]?.v || 5;
-      const comment = row.c[3]?.v || "";
-      const status = row.c[4]?.v || "";
+      const rating = row.c[1]?.v || 5;
+      const comment = row.c[2]?.v || "";
+      const status = row.c[3]?.v || "";
   
       if (status === "yes") {
         html += `
@@ -515,3 +515,4 @@ slider.addEventListener('touchmove', (e) => {
 </body>
 
 </html>
+
