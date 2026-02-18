@@ -1404,64 +1404,94 @@ nav ul .text img {
 }
 
 /* reviews section */
-#reviews {
+
+/* Sekcija */
+.review {
   padding: 60px 20px;
   background: var(--lavender_blush);
   text-align: center;
 }
 
-.review h2 {
+.review-title {
   font-family: var(--common-font);
-  color: var(--cosmic);
   font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--cosmic);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.review-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--chantilly);
+}
+
+/* Grid slider */
+.review-slider {
+  display: flex;
+  gap: 20px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+
+  padding: 10px 0 20px;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+}
+
+.review-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.review-slider::-webkit-scrollbar-thumb {
+  background: var(--cosmic);
+  border-radius: 4px;
+}
+
+/* Svaka recenzija */
+.review-item {
+  background: var(--amour);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  min-width: 260px;
+  max-width: 260px;
+
+  scroll-snap-align: start;
+  user-select: none;
+  transition: transform .2s;
+}
+
+.review-item:hover {
+  transform: translateY(-4px);
+}
+
+.review-slider:active {
+  cursor: grabbing;
+}
+
+.review-item h4 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--cosmic);
   font-weight: 600;
 }
 
-.review-slider {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 20px 0;
-  scroll-snap-type: x mandatory;
-}
-
-.review-card {
-  min-width: 260px;
-  max-width: 300px;
-  background: var(--chantilly);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  text-align: left;
-}
-
-.review-avatar {
-  width: 50px;
-  height: 50px;
-  background: #eee;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.review-stars {
+.review-item p {
+  margin: 6px 0;
+  font-size: 1.1rem;
   color: var(--cosmic);
-  font-size: 18px;
-}
-
-.review-comment {
-  font-style: italic;
-  margin: 10px 0;
-}
-
-.review-name {
-  font-weight: bold;
-}
-
-.review-date {
-  font-size: 12px;
-  color: #777;
+  font-weight: 600;
 }
 
 /* contact section */
@@ -1688,6 +1718,10 @@ nav ul .text img {
     max-width: 100%;
   }
 
+  .review-title {
+    font-size: 1.8rem;
+  }
+
 }
 
 @media(max-width: 550px) {
@@ -1759,7 +1793,6 @@ nav ul .text img {
     font-weight: 600;
   }
 }
-
 
 
 
