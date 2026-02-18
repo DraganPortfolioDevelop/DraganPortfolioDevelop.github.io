@@ -40,18 +40,61 @@
       </form>
     </section>
 
-    <!-- OVO DODAJ -->
-    <script>
-    document.getElementById("sendReview").addEventListener("submit", function() {
-        setTimeout(() => {
-            window.close();
-            window.location.href = "https://salon-lafolie.com";
-        }, 500);
-    });
-    </script>
+  <!-- OVO DODAJ -->
+  <style>
+  #thankYouMessage {
+    display: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  #thankYouMessage h2 {
+    color: #AC7D88;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  #thankYouMessage p {
+    font-size: 18px;
+    color: #444;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  </style>
+  
+  <script>
+  document.getElementById("sendReview").addEventListener("submit", function(e) {
+      // Sakrij samo formu
+      document.getElementById("sendReview").style.display = "none";
+  
+      // Prikaži animaciju zahvalnice
+      const msg = document.createElement("div");
+      msg.id = "thankYouMessage";
+      msg.innerHTML = `
+          <h2>Hvala vam!</h2>
+          <p>Vaša recenzija je uspešno poslata.</p>
+      `;
+      document.body.appendChild(msg);
+      msg.style.display = "block";
+  
+      // Sačekaj da se POST završi, zatim zatvori ili preusmeri
+      setTimeout(() => {
+          window.close();
+          window.location.href = "https://salon-lafolie.com";
+      }, 1500);
+  });
+  </script>
+
 </body>
 
+
 </html>
+
 
 
 
