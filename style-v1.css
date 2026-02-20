@@ -1677,6 +1677,9 @@ nav ul .text img {
 }
 
 @media(max-width: 768px) {
+  .nav ul li a {
+    font-size: 1.6rem;
+  }
   .brends .content {
       flex-wrap: wrap;
     }
@@ -1793,6 +1796,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
