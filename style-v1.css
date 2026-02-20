@@ -160,7 +160,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--lavender_blush);
   display: block;
@@ -1793,6 +1793,7 @@ nav ul .text img {
     font-weight: 600;
   }
 }
+
 
 
 
