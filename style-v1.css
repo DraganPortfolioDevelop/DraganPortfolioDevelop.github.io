@@ -1499,6 +1499,48 @@ nav ul .text img {
   font-weight: 600;
 }
 
+.google-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--cosmic);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem 0;
+}
+
+/* Animation for mobile slider indication */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.review:after {
+  content: '← pregledaj →';
+  display: none;
+  color: var(--cosmic);
+  text-align: center;
+  width: 100%;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  animation: pulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .review:after {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .google-cta {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* contact section */
 
 .contact {
