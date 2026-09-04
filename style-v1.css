@@ -948,7 +948,7 @@ nav ul .text img {
   color: var(--cosmic);
   margin: 0;
   padding: 0 0 30px;
-  text-align: left;
+  text-align: justify;
 }
 
 /* .services .content .img img {  
@@ -1080,6 +1080,11 @@ nav ul .text img {
   }
 }
 
+@media (max-width: 600px) {
+  .services .content .text p {
+    text-algin: justify;
+  }
+}
 .services .content {
   margin-bottom: 5px;
 }
