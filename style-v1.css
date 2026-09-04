@@ -1508,6 +1508,8 @@ nav ul .text img {
   font-size: 1.1rem;
   font-weight: 600;
   padding: 0.75rem 1.5rem 0;
+  border: 2px solid var(--chantilly); 
+  border-radius: 50px;
 }
 
 /* Animation for mobile slider indication */
