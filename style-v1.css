@@ -1082,7 +1082,7 @@ nav ul .text img {
 
 @media (max-width: 600px) {
   .services .content .text p {
-    text-algin: justify;
+    text-algin: left;
   }
 }
 .services .content {
